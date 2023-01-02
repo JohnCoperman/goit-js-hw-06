@@ -64,9 +64,9 @@ loginForm.addEventListener("submit", emitter.bind(loginForm));
 //   continStr = minStr.replace("33", "222");
 //   splitting.push(continStr);
 // }
-let string = "76335733";
-string.replace("33", "222");
-console.log(string);
+// let string = "76335733";
+// string.replace("33", "222");
+// console.log(string);
 // minStr.split('');
 // console.log(splitting);
 
