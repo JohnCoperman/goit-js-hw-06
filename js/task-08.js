@@ -59,9 +59,10 @@ switch (lambda - 3 * third) {
 }
 
 let splitting = [minStr];
-
+let continStr = "";
 while (minStr.includes("33")) {
-  splitting.push(minStr.replace("33", "222"));
+  continStr = minStr.replace("33", "222");
+  splitting.push(continStr);
 }
 
 // minStr.split('');
