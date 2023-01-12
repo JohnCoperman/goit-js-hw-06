@@ -29,48 +29,4 @@ loginForm.addEventListener("submit", emitter.bind(loginForm));
 //   event.preventDefault();
 //   console.log(event.currentTarget);
 // });
-//------------------------------------------------------------------
-
-// let lambda = 13;
-
-// const third = Math.floor(lambda / 3);
-// let minStr = "";
-
-// switch (lambda - 3 * third) {
-//   case 0:
-//     for (let i = 0; i < third; i++) {
-//       minStr = minStr + 3;
-//     }
-//     break;
-
-//   case 2:
-//     for (let i = 0; i < third; i++) {
-//       minStr = minStr + 3;
-//     }
-//     minStr = minStr + 2;
-//     break;
-
-//   case 1:
-//     for (let i = 0; i < third - 1; i++) {
-//       minStr = minStr + 3;
-//     }
-//     minStr = minStr + 2 + 2;
-//     break;
-// }
-
-// let splitting = [minStr];
-// let continStr = "";
-// while (minStr.includes("33")) {
-//   continStr = minStr.replace("33", "222");
-//   splitting.push(continStr);
-// }
-// let string = "76335733";
-// string.replace("33", "222");
-// console.log(string);
-// minStr.split('');
-// console.log(splitting);
-
-// splitting.push();
-
-// splitSized.push(elem)
-// console.log(threes);
+//--------------------------------------------------------------------------------------------

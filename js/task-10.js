@@ -1,24 +1,44 @@
 function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0)}`;
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
 }
 
-const scriptTag = document.querySelector('body').lastElementChild;
-const contrInput = document.querySelector('#controls').firstElementChild;
-const makeDIVS = document.querySelector('button[data-create]');
-const killDIVS = document.querySelector('button[data-destroy]');
+const boxOfBoxes = document.querySelector("#boxes");
+const contrInput = document.querySelector("#controls").firstElementChild;
+const makeDIVS = document.querySelector("button[data-create]");
+const killDIVS = document.querySelector("button[data-destroy]");
 
 function making(event) {
-  let divs = '';
+  let divs = "";
   for (let i = 0; i < Number(contrInput.value); i++) {
-    divs = divs + `<div id="boxes" style ="width:${30 + 10*i}px; height:${30 + 10*i}px; background-color:${getRandomHexColor()}"}></div>`;
+    divs =
+      divs +
+      `<div style ="width:${30 + 10 * i}px; height:${
+        30 + 10 * i
+      }px; background-color:${getRandomHexColor()}"}></div>`;
   }
-  scriptTag.insertAdjacentHTML('beforebegin', divs);
+  boxOfBoxes.insertAdjacentHTML("beforeend", divs);
 }
 
-function destroyBoxes(event) {
-  const suicideBoxes = document.querySelectorAll('#boxes');
+// function making(event) {
+//   let divs = [];
 
-  suicideBoxes.forEach(box => box.remove());
+//   for (let i = 0; i < Number(contrInput.value); i++) {
+//     let divEl = document.createElement("div");
+//     divEl.style["backgroundColor"] = getRandomHexColor();
+//     divEl.style["width"] = `${30 + 10 * i}px`;
+//     divEl.style["height"] = `${30 + 10 * i}px`;
+//     divEl.id = "boxes";
+//     divs.push(divEl);
+//   }
+//   boxOfBoxes.append(...divs);
+//   // document.querySelector(".container").append(...divs);
+// }
+
+function destroyBoxes(event) {
+  const killContainer = document.querySelector("#boxes");
+  killContainer.innerHTML = "";
 }
 
 makeDIVS.addEventListener("click", making.bind(makeDIVS));
